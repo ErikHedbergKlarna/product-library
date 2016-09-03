@@ -1,4 +1,5 @@
 const ADD_PRODUCT = 'ADD_PRODUCT'
+const DELETE_PRODUCT = 'DELETE_PRODUCT'
 
 const addProduct = (product) => {
   return {
@@ -7,7 +8,16 @@ const addProduct = (product) => {
   }
 }
 
+const deleteProduct = (id) => {
+  return {
+    type: DELETE_PRODUCT,
+    payload: id
+  }
+}
+
 export default {
   ADD_PRODUCT,
-  addProduct
+  addProduct,
+  DELETE_PRODUCT,
+  deleteProduct
 }
