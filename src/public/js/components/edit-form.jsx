@@ -9,9 +9,9 @@ const EditForm = React.createClass({
   },
 
   propTypes: {
-    id: React.PropTypes.number.isRequired,
-    initialPrice: React.PropTypes.number.isRequired,
-    initialName: React.PropTypes.string.isRequired,
+    id: React.PropTypes.number,
+    initialPrice: React.PropTypes.number,
+    initialName: React.PropTypes.string,
     submit: React.PropTypes.func.isRequired,
     visible: React.PropTypes.bool.isRequired
   },
