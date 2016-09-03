@@ -89,6 +89,11 @@ body {
     color: #222;
     border-color: #666;
     box-shadow: none; }
+  .button--round {
+    border-radius: 4rem;
+    height: 4rem;
+    width: 4rem;
+    padding: 0; }
 
 label {
   font-size: 1.4rem; }

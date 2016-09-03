@@ -14,7 +14,9 @@ const AddProductButton = React.createClass({
     )
 
     return (
-      <button className={classNames} onClick={this.props.click}>Add product</button>
+      <button className={classNames} onClick={this.props.click}>
+        <i className='fa fa-plus-circle'></i>&nbsp;Add product
+      </button>
     )
   }
 })

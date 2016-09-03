@@ -13,10 +13,10 @@ const ProductList = React.createClass({
         <td className='product__info product__info--name'>{ product.name }</td>
         <td className='product__info product__info--price'>{ product.price }</td>
         <td className='product__info product__info--edit'>
-          <button className='button button--small' onClick={() => { this.props.edit(product.id) }}>Edit</button>
+          <button className='button button--small button--round' onClick={() => { this.props.edit(product.id) }}><i className='fa fa-pencil'></i></button>
         </td>
         <td className='product__info product__info--delete'>
-          <button className='button button--small' onClick={() => { this.props.delete(product.id) }}>Delete</button>
+          <button className='button button--small button--round' onClick={() => { this.props.delete(product.id) }}><i className='fa fa-trash'></i></button>
         </td>
       </tr>)
   },
@@ -30,8 +30,8 @@ const ProductList = React.createClass({
           <tr>
             <td className='product-list__header'>Name</td>
             <td className='product-list__header'>Price</td>
-            <td className='product-list__header'></td>
-            <td className='product-list__header'></td>
+            <td className='product-list__header'>Edit</td>
+            <td className='product-list__header'>Delete</td>
           </tr>
         </thead>
         <tbody>

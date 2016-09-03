@@ -130,6 +130,14 @@ body {
         border-color: #666;
         box-shadow: none;
     }
+
+    &--round {
+        $size: 4rem;
+        border-radius: $size;
+        height: $size;
+        width: $size;
+        padding: 0;
+    }
 }
 
 label {
