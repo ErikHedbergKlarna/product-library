@@ -38,21 +38,25 @@ const AddForm = React.createClass({
     if (!this.props.visible) {
       return (<div></div>)
     }
+
     return (
       <form onSubmit={this.submit}>
-        <ul>
-          <li>
+        <h2>Add product</h2>
+        <dl className='form-fields'>
+          <dt className='form-fields__title'>
             <label>Name</label>
+          </dt>
+          <dd className='form-fields__input'>
             <input type='text' onChange={this.setName} />
-          </li>
-          <li>
+          </dd>
+          <dt className='form-fields__title'>
             <label>Price</label>
-            <input type='number' onChange={this.setPrice} />
-          </li>
-          <li>
-            <button type='submit'>Add</button>
-          </li>
-        </ul>
+          </dt>
+          <dd className='form-fields__input'>
+            <input type='text' onChange={this.setPrice} />
+          </dd>
+        </dl>
+        <button className='button button--small' type='submit'>Add</button>
       </form>
     )
   }

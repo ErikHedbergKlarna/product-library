@@ -8,11 +8,17 @@ export default React.createClass({
   render () {
     return (
       <div>
-        <h1>Product library</h1>
-        <AddProductButton />
-        <AddForm />
-        <EditForm />
+        <div className='header'>
+          <h1 className='header__title'>Product library</h1>
+          <AddProductButton className='header__button' />
+        </div>
         <ProductList />
+        <div className='form-container'>
+          <div className='form-container__content'>
+            <AddForm />
+            <EditForm />
+          </div>
+        </div>
       </div>
     )
   }

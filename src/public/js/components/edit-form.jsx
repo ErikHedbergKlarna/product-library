@@ -58,20 +58,22 @@ const EditForm = React.createClass({
     const { name, price } = this.state
     return (
       <form onSubmit={this.submit}>
-        <h2>Edit {name}</h2>
-        <ul>
-          <li>
+        <h2>Edit product <em>{name}</em></h2>
+        <dl className='form-fields'>
+          <dt className='form-fields__title'>
             <label>Name</label>
+          </dt>
+          <dd className='form-fields__input'>
             <input type='text' ref='name' value={name} onChange={this.onNameChange} />
-          </li>
-          <li>
+          </dd>
+          <dt className='form-fields__title'>
             <label>Price</label>
-            <input type='number' ref='price' value={price} onChange={this.onPriceChange} />
-          </li>
-          <li>
-            <button type='submit'>Update</button>
-          </li>
-        </ul>
+          </dt>
+          <dd className='form-fields__input'>
+            <input type='text' ref='price' value={price} onChange={this.onPriceChange} />
+          </dd>
+        </dl>
+        <button className='button button--small' type='submit'>Update</button>
       </form>
     )
   }

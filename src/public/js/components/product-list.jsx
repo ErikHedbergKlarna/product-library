@@ -9,11 +9,15 @@ const ProductList = React.createClass({
 
   renderProduct (product) {
     return (
-      <tr key={ product.id }>
-        <td>{ product.name }</td>
-        <td>{ product.price }</td>
-        <td><button onClick={() => { this.props.edit(product.id) }}>Edit</button></td>
-        <td><button onClick={() => { this.props.delete(product.id) }}>Delete</button></td>
+      <tr key={ product.id } className='product'>
+        <td className='product__info product__info--name'>{ product.name }</td>
+        <td className='product__info product__info--price'>{ product.price }</td>
+        <td className='product__info product__info--edit'>
+          <button className='button button--small' onClick={() => { this.props.edit(product.id) }}>Edit</button>
+        </td>
+        <td className='product__info product__info--delete'>
+          <button className='button button--small' onClick={() => { this.props.delete(product.id) }}>Delete</button>
+        </td>
       </tr>)
   },
 
@@ -21,7 +25,15 @@ const ProductList = React.createClass({
     const renderProduct = this.renderProduct
 
     return (
-      <table>
+      <table className='product-list'>
+        <thead>
+          <tr>
+            <td className='product-list__header'>Name</td>
+            <td className='product-list__header'>Price</td>
+            <td className='product-list__header'></td>
+            <td className='product-list__header'></td>
+          </tr>
+        </thead>
         <tbody>
           { this.props.products.map(renderProduct) }
         </tbody>

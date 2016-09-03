@@ -1,13 +1,20 @@
+import classnames from 'classnames'
 import React from 'react'
 
 const AddProductButton = React.createClass({
   propTypes: {
-    click: React.PropTypes.func.isRequired
+    click: React.PropTypes.func.isRequired,
+    className: React.PropTypes.string
   },
 
   render () {
+    const classNames = classnames(
+      this.props.className,
+      'button'
+    )
+
     return (
-      <button onClick={this.props.click}>Add product</button>
+      <button className={classNames} onClick={this.props.click}>Add product</button>
     )
   }
 })
