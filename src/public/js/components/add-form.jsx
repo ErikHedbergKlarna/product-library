@@ -24,6 +24,7 @@ const AddForm = React.createClass({
 
   submit (e) {
     const product = {
+      id: (new Date()).getTime(),
       name: this.state.name,
       price: this.state.price
     }
