@@ -51,11 +51,17 @@ body {
 
 .form-container__content {
   background: #fff;
-  max-width: 640px;
+  max-width: 320px;
   width: 100%;
   margin: 5rem auto;
   padding: 3rem;
-  border-radius: 10px; }
+  border-radius: 10px;
+  position: relative; }
+
+.form-container__close {
+  position: absolute;
+  top: 4rem;
+  right: 3rem; }
 
 .form-fields__title {
   margin: 0 0 0.4rem; }
@@ -78,6 +84,11 @@ body {
   .button--small {
     height: 2.4rem;
     padding: 0.2rem 1.2rem; }
+  .button--secondary {
+    background: #eee;
+    color: #222;
+    border-color: #666;
+    box-shadow: none; }
 
 label {
   font-size: 1.4rem; }

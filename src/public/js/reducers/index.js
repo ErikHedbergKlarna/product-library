@@ -78,7 +78,7 @@ const reducer = (state = initialState, action) => {
         }
       }
 
-    case actions.SHOW_HIDE_FORM:
+    case actions.HIDE_EDIT_FORM:
       return {
         ...state,
         forms: {
@@ -90,6 +90,21 @@ const reducer = (state = initialState, action) => {
         }
       }
 
+    case actions.HIDE_FORMS:
+      return {
+        ...state,
+        forms: {
+          ...state.forms,
+          add: {
+            ...state.forms.add,
+            visible: false
+          },
+          edit: {
+            ...state.forms.edit,
+            visible: false
+          }
+        }
+      }
   }
 
   return state

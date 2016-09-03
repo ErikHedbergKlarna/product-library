@@ -8,6 +8,8 @@ const HIDE_ADD_FORM = 'HIDE_ADD_FORM'
 const SHOW_EDIT_FORM = 'SHOW_EDIT_FORM'
 const HIDE_EDIT_FORM = 'HIDE_EDIT_FORM'
 
+const HIDE_FORMS = 'HIDE_FORMS'
+
 const addProduct = (product) => ({
   type: ADD_PRODUCT,
   payload: product
@@ -43,6 +45,11 @@ const hideEditForm = () => ({
   payload: undefined
 })
 
+const hideForms = () => ({
+  type: HIDE_FORMS,
+  payload: undefined
+})
+
 export default {
   ADD_PRODUCT,
   addProduct,
@@ -57,5 +64,7 @@ export default {
   SHOW_EDIT_FORM,
   showEditForm,
   HIDE_EDIT_FORM,
-  hideEditForm
+  hideEditForm,
+  HIDE_FORMS,
+  hideForms
 }
