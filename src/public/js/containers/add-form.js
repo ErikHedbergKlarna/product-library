@@ -3,7 +3,9 @@ import { bindActionCreators } from 'redux'
 import actions from './../actions'
 import AddFormComponent from './../components/add-form.jsx'
 
-const mapStateToProps = (state) => ({})
+const mapStateToProps = (state) => ({
+  visible: state.forms.add.visible
+})
 
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({

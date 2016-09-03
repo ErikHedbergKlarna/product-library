@@ -2,7 +2,8 @@ import React from 'react'
 
 const AddForm = React.createClass({
   propTypes: {
-    submit: React.PropTypes.func.isRequired
+    submit: React.PropTypes.func.isRequired,
+    visible: React.PropTypes.bool.isRequired
   },
 
   getInitialState () {
@@ -18,7 +19,7 @@ const AddForm = React.createClass({
   },
 
   setPrice (e) {
-    const price = e.target.value
+    const price = parseInt(e.target.value, 10)
     this.setState({ price })
   },
 
@@ -34,6 +35,9 @@ const AddForm = React.createClass({
   },
 
   render () {
+    if (!this.props.visible) {
+      return (<div></div>)
+    }
     return (
       <form onSubmit={this.submit}>
         <ul>
