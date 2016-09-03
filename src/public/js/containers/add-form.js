@@ -7,7 +7,7 @@ const mapStateToProps = (state) => ({})
 
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({
-    onSubmit: () => alert('hej')
+    submit: actions.addProduct
   }, dispatch)
 }
 
@@ -15,4 +15,3 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(AddFormComponent)
-
