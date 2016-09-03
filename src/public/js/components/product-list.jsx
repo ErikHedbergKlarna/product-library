@@ -3,6 +3,7 @@ import React from 'react'
 const ProductList = React.createClass({
   propTypes: {
     products: React.PropTypes.array.isRequired,
+    edit: React.PropTypes.func.isRequired,
     delete: React.PropTypes.func.isRequired
   },
 
@@ -11,12 +12,9 @@ const ProductList = React.createClass({
       <tr key={ product.id }>
         <td>{ product.name }</td>
         <td>{ product.price }</td>
-        <td><button onClick={() => { this.delete(product.id) }}>Delete</button></td>
+        <td><button onClick={() => { this.props.edit(product.id) }}>Edit</button></td>
+        <td><button onClick={() => { this.props.delete(product.id) }}>Delete</button></td>
       </tr>)
-  },
-
-  delete (id) {
-    this.props.delete(id)
   },
 
   render () {
