@@ -16,7 +16,9 @@ const Forms = React.createClass({
     return (
       <div className='form-container'>
         <div className='form-container__content'>
-          <button className='button button--small button--secondary form-container__close' onClick={this.props.close}>&times;</button>
+          <button className='form-container__close' onClick={this.props.close}>
+            <i className='fa fa-close fa-2x'></i>
+          </button>
           <Form />
         </div>
       </div>
