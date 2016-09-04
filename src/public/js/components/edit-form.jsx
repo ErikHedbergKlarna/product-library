@@ -25,20 +25,20 @@ const EditForm = React.createClass({
     })
   },
 
-  onNameChange (e) {
+  setName (e) {
     const name = e.target.value
     this.setState({ name })
   },
 
-  onPriceChange (e) {
-    const price = parseInt(e.target.value, 10)
+  setPrice (e) {
+    const price = e.target.value
     this.setState({ price })
   },
 
   submit (e) {
     const id = this.props.id
     const name = this.state.name
-    const price = this.state.price
+    const price = parseFloat(this.state.price, 10)
 
     const product = {
       id,
@@ -64,13 +64,13 @@ const EditForm = React.createClass({
             <label>Name</label>
           </dt>
           <dd className='form-fields__input'>
-            <input type='text' ref='name' value={name} onChange={this.onNameChange} />
+            <input type='text' value={name} onChange={this.setName} required />
           </dd>
           <dt className='form-fields__title'>
             <label>Price</label>
           </dt>
           <dd className='form-fields__input'>
-            <input type='text' ref='price' value={price} onChange={this.onPriceChange} />
+            <input type='number' value={price} onChange={this.setPrice} required min='0' step='0.01' />
           </dd>
         </dl>
         <button className='button button--small' type='submit'>Update</button>

@@ -19,15 +19,19 @@ const AddForm = React.createClass({
   },
 
   setPrice (e) {
-    const price = parseInt(e.target.value, 10)
+    const price = e.target.value
     this.setState({ price })
   },
 
   submit (e) {
+    const id = (new Date()).getTime()
+    const name = this.state.name
+    const price = parseFloat(this.state.price, 10)
+
     const product = {
-      id: (new Date()).getTime(),
-      name: this.state.name,
-      price: this.state.price
+      id,
+      name,
+      price
     }
 
     e.preventDefault()
@@ -47,13 +51,13 @@ const AddForm = React.createClass({
             <label>Name</label>
           </dt>
           <dd className='form-fields__input'>
-            <input type='text' onChange={this.setName} />
+            <input type='text' onChange={this.setName} required />
           </dd>
           <dt className='form-fields__title'>
             <label>Price</label>
           </dt>
           <dd className='form-fields__input'>
-            <input type='text' onChange={this.setPrice} />
+            <input type='number' onChange={this.setPrice} required min='0' step='0.01' />
           </dd>
         </dl>
         <button className='button button--small' type='submit'>Add</button>
