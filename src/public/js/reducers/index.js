@@ -32,6 +32,17 @@ const reducer = (state = initialState, action) => {
         products: state.products.filter((product) => (product.id !== action.payload))
       }
 
+    case actions.CLONE_PRODUCT:
+      var clone = {...state.products.find((product) => (product.id === action.payload))}
+      clone = {...clone,
+        id: (new Date()).getTime(),
+        name: `Copy of ${clone.name}`
+      }
+      return {
+        ...state,
+        products: [clone, ...state.products]
+      }
+
     case actions.UPDATE_PRODUCT:
       return {
         ...state,

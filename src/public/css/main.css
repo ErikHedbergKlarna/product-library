@@ -38,8 +38,8 @@ body {
     width: 40%; }
   .product__info--price {
     width: 30%; }
-  .product__info--delete, .product__info--edit {
-    width: 15%; }
+  .product__info--clone, .product__info--delete, .product__info--edit {
+    width: 10%; }
 
 .form-container {
   position: fixed;

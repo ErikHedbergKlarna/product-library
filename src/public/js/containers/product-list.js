@@ -10,7 +10,8 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({
     edit: actions.showEditForm,
-    delete: actions.deleteProduct
+    delete: actions.deleteProduct,
+    clone: actions.cloneProduct
   }, dispatch)
 }
 

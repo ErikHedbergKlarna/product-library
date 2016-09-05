@@ -1,6 +1,7 @@
 const ADD_PRODUCT = 'ADD_PRODUCT'
 const DELETE_PRODUCT = 'DELETE_PRODUCT'
 const UPDATE_PRODUCT = 'UPDATE_PRODUCT'
+const CLONE_PRODUCT = 'CLONE_PRODUCT'
 
 const SHOW_ADD_FORM = 'SHOW_ADD_FORM'
 const HIDE_ADD_FORM = 'HIDE_ADD_FORM'
@@ -23,6 +24,11 @@ const deleteProduct = (id) => ({
 const updateProduct = (product) => ({
   type: UPDATE_PRODUCT,
   payload: product
+})
+
+const cloneProduct = (id) => ({
+  type: CLONE_PRODUCT,
+  payload: id
 })
 
 const showAddForm = () => ({
@@ -57,6 +63,8 @@ export default {
   deleteProduct,
   UPDATE_PRODUCT,
   updateProduct,
+  CLONE_PRODUCT,
+  cloneProduct,
   SHOW_ADD_FORM,
   showAddForm,
   HIDE_ADD_FORM,
