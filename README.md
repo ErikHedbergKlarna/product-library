@@ -1,5 +1,7 @@
-# product-library
-A front-end web application for CRUD:ing products
+# Pastry library
+A front-end web application for CRUD:ing pastries
+
+[Demo](https://pastrylibrary.herokuapp.com)
 
 # Develop
 ```
@@ -9,8 +11,8 @@ $ open http://localhost:8080/
 ```
 
 # Todo
-- [ ] Add continuous deployment to Heroku
 - [ ] Add filter of products
 - [ ] Save only products in persistent storage
-- [ ] Add duplicate
 - [ ] Add product variations
+- [x] Add duplicate
+- [x] Add continuous deployment to Heroku
