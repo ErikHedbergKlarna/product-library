@@ -11,6 +11,8 @@ const HIDE_EDIT_FORM = 'HIDE_EDIT_FORM'
 
 const HIDE_FORMS = 'HIDE_FORMS'
 
+const SEARCH = 'SEARCH'
+
 const addProduct = (product) => ({
   type: ADD_PRODUCT,
   payload: product
@@ -56,6 +58,11 @@ const hideForms = () => ({
   payload: undefined
 })
 
+const search = (query) => ({
+  type: SEARCH,
+  payload: query
+})
+
 export default {
   ADD_PRODUCT,
   addProduct,
@@ -74,5 +81,7 @@ export default {
   HIDE_EDIT_FORM,
   hideEditForm,
   HIDE_FORMS,
-  hideForms
+  hideForms,
+  SEARCH,
+  search
 }

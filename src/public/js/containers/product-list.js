@@ -5,7 +5,7 @@ import selectors from './../selectors'
 import ProductList from './../components/product-list.jsx'
 
 const mapStateToProps = (state) => ({
-  products: selectors.getProducts(state)
+  products: selectors.getFilteredProducts(state)
 })
 
 const mapDispatchToProps = (dispatch) => {

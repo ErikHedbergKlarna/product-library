@@ -14,7 +14,8 @@ const initialState = {
         price: undefined
       }
     }
-  }
+  },
+  query: ''
 }
 
 const reducer = (state = initialState, action) => {
@@ -115,6 +116,12 @@ const reducer = (state = initialState, action) => {
             visible: false
           }
         }
+      }
+
+    case actions.SEARCH:
+      return {
+        ...state,
+        query: action.payload
       }
   }
 
