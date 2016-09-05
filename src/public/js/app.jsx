@@ -8,7 +8,7 @@ export default React.createClass({
     return (
       <div>
         <div className='header'>
-          <h1 className='header__title'>Product library</h1>
+          <h1 className='header__title'>Pastry library</h1>
           <AddProductButton className='header__button' />
         </div>
         <ProductList />

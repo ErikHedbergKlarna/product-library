@@ -58,7 +58,7 @@ const EditForm = React.createClass({
     const { name, price } = this.state
     return (
       <form onSubmit={this.submit}>
-        <h2>Edit product <em>{name}</em></h2>
+        <h2>Edit <em>{name}</em></h2>
         <dl className='form-fields'>
           <dt className='form-fields__title'>
             <label>Name</label>

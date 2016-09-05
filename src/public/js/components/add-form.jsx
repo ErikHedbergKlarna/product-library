@@ -45,7 +45,7 @@ const AddForm = React.createClass({
 
     return (
       <form onSubmit={this.submit}>
-        <h2>Add product</h2>
+        <h2>Add pastry</h2>
         <dl className='form-fields'>
           <dt className='form-fields__title'>
             <label>Name</label>
