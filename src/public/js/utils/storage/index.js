@@ -9,10 +9,10 @@ const load = (key) => {
     return JSON.parse(window.localStorage.getItem(key)) || undefined
   }
 }
-const saveState = save('state')
-const loadState = load('state')
+const saveProducts = save('products')
+const loadProducts = load('products')
 
 export default {
-  saveState,
-  loadState
+  saveProducts,
+  loadProducts
 }

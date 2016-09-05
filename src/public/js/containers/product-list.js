@@ -1,10 +1,11 @@
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import actions from './../actions'
+import selectors from './../selectors'
 import ProductList from './../components/product-list.jsx'
 
 const mapStateToProps = (state) => ({
-  products: state.products
+  products: selectors.getProducts(state)
 })
 
 const mapDispatchToProps = (dispatch) => {
