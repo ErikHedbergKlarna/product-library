@@ -12,7 +12,7 @@ const ProductList = React.createClass({
     return (
       <tr key={ product.id } className='product'>
         <td className='product__info product__info--name'>{ product.name }</td>
-        <td className='product__info product__info--price'>{ product.price }</td>
+        <td className='product__info product__info--price'>&#8364; { product.price }</td>
         <td className='product__info product__info--edit'>
           <button className='button button--small button--round' onClick={() => { this.props.edit(product.id) }}><i className='fa fa-pencil'></i></button>
         </td>
