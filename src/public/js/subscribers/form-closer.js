@@ -20,9 +20,7 @@ const FormCloser = (store) => {
 
     if (isProductAdded(oldState, newState)) {
       action = actions.hideAddForm
-    }
-
-    if (isProductChanged(oldState, newState)) {
+    } else if (isProductChanged(oldState, newState)) {
       action = actions.hideEditForm
     }
 
